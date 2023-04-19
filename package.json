@@ -1,15 +1,15 @@
 {
-	"name": "pseudocodigo",
+	"name": "Pseudocodigo-ES",
 	"author": {
-		"name": "marco antonio sanches"
+		"name": "Kkai"
 	},
-	"publisher": "marcosanches",
-	"icon": "logo.jpg",
-	"displayName": "pseudocodigo",
-	"description": "Formatação de sintaxe de pseudocodigo para as aulas de Algoritmos (TDA)",
-	"version": "0.0.4",
+	"publisher": "Kkai",
+	"icon": "logo.png",
+	"displayName": "Pseudocódigo",
+	"description": "Formato para pseudocódgo en español",
+	"version": "0.0.1",
 	"repository": {
-		"url": "https://github.com/msanches/pseudocodigo"
+		"url": "https://github.com/kkaiyuanwg/pseudovs"
 	},
 	"engines": {
 		"vscode": "^1.39.0"
@@ -20,10 +20,10 @@
 	"contributes": {
 		"languages": [
 			{
-				"id": "pseudo-mas",
+				"id": "pseudo-es",
 				"aliases": [
-					"pseudo-Mas",
-					"pseudo-mas"
+					"pseudo-ES",
+					"pseudo-ESP"
 				],
 				"extensions": [
 					".algo",
@@ -35,16 +35,26 @@
 		],
 		"grammars": [
 			{
-				"language": "pseudo-mas",
+				"language": "pseudo-es",
 				"scopeName": "source.algo",
 				"path": "./syntaxes/pseudocodigo.tmLanguage.json"
 			}
 		],
 		"snippets": [
 			{
-				"language": "pseudo-mas",
+				"language": "pseudo-es",
 				"path": "./snippets/snippets.json"
 			}
 		]
+	},
+	"__metadata": {
+		"id": "930c7f5f-aeaf-4df7-a180-8347d489ff79",
+		"publisherId": "b9caca0a-7096-4429-834a-3422371bac12",
+		"publisherDisplayName": "Kkai",
+		"targetPlatform": "undefined",
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1681918744102,
+		"preRelease": false
 	}
 }

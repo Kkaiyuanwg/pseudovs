@@ -26,12 +26,12 @@
     // symbols that are auto closed when typing
     "autoClosingPairs": [
         [
-            "Debut:",
-            "Fin"
+            "Algorito",
+            "FinAlgoritmo"
         ],
         [
-            "Structure:",
-            "Fin Structure"
+            "Si",
+            "FinSi"
         ],
         [
             "Algo:",

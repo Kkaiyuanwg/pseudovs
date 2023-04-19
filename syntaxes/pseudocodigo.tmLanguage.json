@@ -22,35 +22,35 @@
 				},
 				{
 					"name": "keyword.control.algo-aix",
-					"match": "\\b(continue|faça|faca|repita|retorne|raiz|para|escreva|leia|enquanto|var)\\b"
+					"match": "\\b(?i:(definir|como|esperar|hasta que|repita|retorne|para|escribir|leer|borrar|esperar))\\b"
+				},
+				{
+					"name": "markup.italic",
+					"match": "\\b(?i:(raiz|rc|abs|ln|exp|sen|cos|tan|asen|acos|atan|trunc|redon|azar|aleatorio|longitud|mayusculas|minusculas|subcadenas|concatenar|convertiranumero|convertiratexto))\\b"
 				},
 				{
 					"name": "support.type",
-					"match": "\\b(algoritmo|início|fim|inicio| FTant que|<-|->)\\b"
+					"match": "\\b(?i:(proceso|finproceso|algoritmo|inicio|finalgoritmo|<-|->|:=))\\b"
 				},
 				{
 					"name": "variable.language",
-					"match": "\\b(void|real|inteiro|caractere|literal|lógico|logico)\\b"
-				},
-				{
-					"name": "storage.type",
-					"match": "\\b(verdadeiro|falso)\\b"
+					"match": "\\b(?i:(void|real|entero|caracter|literal|lógico|logico))\\b"
 				},
 				{
 					"name": "constant.numeric",
-					"match": "\\b(\\dd)\\b"
+					"match": "\\b(?i:(verdadero|falso|true|false|^\\d*$))\\b"
 				},
 				{
-					"name": "constant.language",
-					"match": "\\b(se|senão|senao|escolha|caso|pare|padrão|padrao|fim_se|fim_senão)\\b"
+					"name": "storage.type",
+					"match": "\\b(?i:(de otro modo|repetir|hasta que|para|finpara|hasta|con paso|funcion|finfuncion|si|entonces|sino|escoger|caso|mientras|finmientras|segun|finsegun|hacer|finsi))\\b"
 				},
 				{
 					"name": "keyword.operator",
-					"match": "\\b(=|!=|<|>|<=|>=)\\b"
+					"match": "\\b(?i:(es|no|distinto de|igual a|mayor que|menor que|mayor o igual a|menor o igual a|==|=|!=|<|>|<=|>=))\\b"
 				},
 				{
 					"name": "keyword.control",
-					"match": "\\b(ou|e|não|or|and|not|then)\\b"
+					"match": "\\b(o|y|no|or|and|not|then)\\b"
 				}
 			]
 		},
@@ -66,7 +66,7 @@
 			]
 		},
 		"string": {
-			"name": "constant.character",
+			"name": "string.quoted.single.algo-aix",
 			"begin": "'",
 			"end": "'",
 			"patterns": [
