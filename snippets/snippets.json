@@ -1,58 +1,40 @@
 {
-	"Algoritmo": {
+	"algoritmo": {
 		"prefix": "algoritmo",
 		"body": [
-			"algoritmo ${1:name}",
-			"\tinicio",
-			"\t\t",
-			"\tfin"
+			"Algoritmo ${1:name}",
+			"\t",
+			"FinAlgoritmo"
 		],
 		"description": "Inserción de un bloque de algoritmo"
 	},
 	"para": {
 		"prefix": "para",
 		"body": [
-			"para (${1:i}; ${2:min}; ${3:max}){ ",
+			"Para ${2:min} Hasta ${3:max} Con paso ${1:i} Hacer { ",
 			"\t$0",
-			"}"
+			"FinPara"
 		],
-		"description": "Inserción de un bloque de bucle"
+		"description": "Inserción de un bloque de bucle tipo \"para\""
 	},
-	"inicio": {
-		"prefix": "inicio",
+	"mientras": {
+		"prefix": "Mientras",
 		"body": [
-			"inicio",
+			"Mientras (${1:condición}) Hacer",
 			"\t$0",
-			"fin"
+			"FinMientras"
 		],
-		"description": "Insertion d'un bloc d'algo \"pour\""
-	},
-	"do": {
-		"prefix": "do",
-		"body": [
-			"do",
-			"\t$0",
-			"while(${1:conditon})"
-		],
-		"description": "Insertion d'un bloc Faire .. Tant que\"pour\""
+		"description": "Inserción de un bloque de bucle tipo \"mientras\""
 	},
 	"si": {
 		"prefix": "si",
 		"body": [
-			"Si ${1:conditon} Entonces",
+			"Si ${1:condición} Entonces",
 			"\t$0",
 			"SiNo",
 			"\t$0",
 			"FinSi"
 		],
-		"description": "Inserción d eun bloque \"si\""
-	},
-	"enquanto": {
-		"prefix": "cuando",
-		"body": [
-			"cuando ${1:condition}",
-			"\t$0"
-		],
-		"description": "Insertion d'un bloc \"tant que\""
+		"description": "Inserción de un bloque \"si\""
 	}
 }

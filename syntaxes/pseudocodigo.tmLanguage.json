@@ -30,7 +30,7 @@
 				},
 				{
 					"name": "support.type",
-					"match": "\\b(?i:(proceso|finproceso|algoritmo|inicio|finalgoritmo|<-|->|:=))\\b"
+					"match": "\\b(?i:(proceso|finproceso|algoritmo|inicio|fin|finalgoritmo|<-|->|:=))\\b"
 				},
 				{
 					"name": "variable.language",
@@ -38,7 +38,7 @@
 				},
 				{
 					"name": "constant.numeric",
-					"match": "\\b(?i:(verdadero|falso|true|false|^\\d*$))\\b"
+					"match": "\\b(?i:(verdadero|falso|true|false))\\b"
 				},
 				{
 					"name": "storage.type",
@@ -76,9 +76,29 @@
 				}
 			]
 		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.integer.algo-aix",
+					"match": "\\b[0-9]+(?![0-9]*\\.)\\b"
+				},
+				{
+					"name": "constant.numeric.float.algo-aix",
+					"match": "\\b[0-9]+\\.[0-9]+\\b"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.terminator.algo-aix",
+					"match": ";"
+				}
+			]
+		},
 		"expression": {
 			"name": "support.function",
-			"match": "afficher|saisir|ligne_suivante|taille|retourner|reserver|liberer|Read|Write|size|return|allocate|free"
+			"match": "afficher|"
 		},
 		"params": {
 			"name": "variable.parameter",
