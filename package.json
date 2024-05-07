@@ -1,60 +1,61 @@
 {
-	"name": "Pseudocodigo-ES",
-	"author": {
-		"name": "Kkai"
-	},
-	"publisher": "Kkai",
-	"icon": "logo.png",
-	"displayName": "Pseudocódigo",
-	"description": "Formato para pseudocódgo en español",
-	"version": "0.0.1",
-	"repository": {
-		"url": "https://github.com/kkaiyuanwg/pseudovs"
-	},
-	"engines": {
-		"vscode": "^1.39.0"
-	},
-	"categories": [
-		"Programming Languages"
-	],
-	"contributes": {
-		"languages": [
-			{
-				"id": "pseudo-es",
-				"aliases": [
-					"pseudo-ES",
-					"pseudo-ESP"
-				],
-				"extensions": [
-					".algo",
-					".alg",
-					".pse"
-				],
-				"configuration": "./language-configuration.json"
-			}
-		],
-		"grammars": [
-			{
-				"language": "pseudo-es",
-				"scopeName": "source.algo",
-				"path": "./syntaxes/pseudocodigo.tmLanguage.json"
-			}
-		],
-		"snippets": [
-			{
-				"language": "pseudo-es",
-				"path": "./snippets/snippets.json"
-			}
-		]
-	},
-	"__metadata": {
-		"id": "930c7f5f-aeaf-4df7-a180-8347d489ff79",
-		"publisherId": "b9caca0a-7096-4429-834a-3422371bac12",
-		"publisherDisplayName": "Kkai",
-		"targetPlatform": "undefined",
-		"updated": false,
-		"isPreReleaseVersion": false,
-		"installedTimestamp": 1681918744102,
-		"preRelease": false
-	}
+  "name": "Pseudocodigo-ES",
+  "author": {
+    "name": "Kkai"
+  },
+  "publisher": "Kkai",
+  "icon": "logo.png",
+  "displayName": "Pseudocódigo",
+  "description": "Formato para pseudocódgo en español",
+  "version": "0.0.1",
+  "repository": {
+    "url": "https://github.com/kkaiyuanwg/pseudovs"
+  },
+  "engines": {
+    "vscode": "^1.39.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "pseudo-es",
+        "aliases": [
+          "pseudo-ES",
+          "pseudo-ESP"
+        ],
+        "extensions": [
+          ".algo",
+          ".alg",
+          ".psc",
+          ".pse"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pseudo-es",
+        "scopeName": "source.algo",
+        "path": "./syntaxes/pseudocodigo.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "pseudo-es",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  },
+  "__metadata": {
+    "id": "930c7f5f-aeaf-4df7-a180-8347d489ff79",
+    "publisherId": "b9caca0a-7096-4429-834a-3422371bac12",
+    "publisherDisplayName": "Kkai",
+    "targetPlatform": "undefined",
+    "updated": false,
+    "isPreReleaseVersion": false,
+    "installedTimestamp": 1681918744102,
+    "preRelease": false
+  }
 }
