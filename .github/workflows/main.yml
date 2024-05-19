@@ -1,7 +1,5 @@
-            - name: VS Marketplace Publisher
-  # You may pin to the exact commit or the version.
-  # uses: MrLuje/vs-marketplace-publisher@fab2dc2f8fb7d92e8ecee4bf5cad822e46c5b9e2
-  uses: MrLuje/vs-marketplace-publisher@v2
+- name: VS Marketplace Publisher
+uses: MrLuje/vs-marketplace-publisher@v2
   with:
     # Token to access your github repository.
     github_token: # default is ${{ github.token }}
