@@ -6,6 +6,7 @@
 		{"include": "#expression"},
 		{"include": "#strings"},
 		{"include": "#string"},
+		{"include": "#numbers"},
 		{"include": "#params"}
 	],
 	"repository": {
@@ -25,7 +26,7 @@
 					"match": "\\b(?i:(definir|como|esperar|hasta que|repita|retorne|para|escribir|leer|borrar|esperar))\\b"
 				},
 				{
-					"name": "markup.italic",
+					"name": "entity.name",
 					"match": "\\b(?i:(raiz|rc|abs|ln|exp|sen|cos|tan|asen|acos|atan|trunc|redon|azar|aleatorio|longitud|mayusculas|minusculas|subcadenas|concatenar|convertiranumero|convertiratexto))\\b"
 				},
 				{
@@ -34,7 +35,7 @@
 				},
 				{
 					"name": "variable.language",
-					"match": "\\b(?i:(void|real|entero|caracter|literal|lógico|logico))\\b"
+					"match": "\\b(?i:(void|real|entero|caracter|texto|numero|numerico|literal|lógico|logico))\\b"
 				},
 				{
 					"name": "constant.numeric",
@@ -46,11 +47,23 @@
 				},
 				{
 					"name": "keyword.operator",
-					"match": "\\b(?i:(es|no|distinto de|igual a|mayor que|menor que|mayor o igual a|menor o igual a|==|=|!=|<|>|<=|>=))\\b"
+					"match": "\\b(?i:(es|no|distinto de|igual a|mayor que|menor que|mayor o igual a|menor o igual a|es cero|es positivo|es negativo|es par|es impar|es multiplo de|es divisible por|==|=|!=|<|>|<=|>=))\\b"
 				},
 				{
-					"name": "keyword.control",
-					"match": "\\b(o|y|no|or|and|not|then)\\b"
+					"name": "keyword.operator.logical.pseudocode",
+					"match": "\\b(?i:(y|o|no))\\b"
+				},
+				{
+					"name": "keyword.operator.comparison.pseudocode",
+					"match": "\\b(>|<|=|<=|>=|<>)\\b"
+				},
+				{
+					"name": "keyword.operator.arithmetic.pseudocode",
+					"match": "(\\+|\\/|-|\\*|MOD)\\b"
+				},
+				{
+					"name": "keyword.operator.logical.and.pseudocode",
+					"match": "\\b&\\b"
 				}
 			]
 		},
@@ -76,6 +89,10 @@
 				}
 			]
 		},
+		"expression": {
+			"name": "support.function",
+			"match": "fijar"
+		},
 		"numbers": {
 			"patterns": [
 				{
@@ -87,18 +104,6 @@
 					"match": "\\b[0-9]+\\.[0-9]+\\b"
 				}
 			]
-		},
-		"punctuation": {
-			"patterns": [
-				{
-					"name": "punctuation.terminator.algo-aix",
-					"match": ";"
-				}
-			]
-		},
-		"expression": {
-			"name": "support.function",
-			"match": "afficher|"
 		},
 		"params": {
 			"name": "variable.parameter",

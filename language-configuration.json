@@ -38,8 +38,8 @@
             "Variables locales:"
         ],
         [
-            "Faire:",
-            "Tant_que"
+            "Hacer:",
+            "Hasta que"
         ],
         [
             "{",
@@ -65,16 +65,20 @@
     // symbols that that can be used to surround a selection
     "surroundingPairs": [
         [
-            "Debut:",
-            "Fin"
+            "Algorito",
+            "FinAlgoritmo"
         ],
         [
-            "Structure:",
-            "Fin Structure"
+            "Si",
+            "FinSi"
         ],
         [
-            "Faire:",
-            "Tant que"
+            "Algo:",
+            "Variables locales:"
+        ],
+        [
+            "Hacer:",
+            "Hasta que"
         ],
         [
             "{",

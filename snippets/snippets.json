@@ -17,8 +17,17 @@
 		],
 		"description": "Inserción de un bloque de bucle tipo \"para\""
 	},
+	"repetir": {
+		"prefix": "repetir",
+		"body": [
+			"Repetir",
+			"\t$0",
+			"Hasta Que ${1:condición}"
+		],
+		"description": "Inserción de un bloque de bucle tipo \"para\""
+	},
 	"mientras": {
-		"prefix": "Mientras",
+		"prefix": "mientras",
 		"body": [
 			"Mientras (${1:condición}) Hacer",
 			"\t$0",
@@ -36,5 +45,35 @@
 			"FinSi"
 		],
 		"description": "Inserción de un bloque \"si\""
-	}
+	},
+	"escribir": {
+        "prefix": "escribir",
+        "body": [
+            "Escribir ${1:mensaje}"
+        ],
+        "description": "Inserción de un bloque de escritura"
+    },    
+	"proceso": {
+        "prefix": "proceso",
+        "body": [
+            "Proceso ${1:nombre}(${2:parametros})",
+            "\t$0",
+            "FinProceso"
+        ],
+        "description": "Inserción de un bloque de proceso"
+    },
+	"leer": {
+        "prefix": "leer",
+        "body": [
+            "Leer ${1:variable}"
+        ],
+        "description": "Inserción de un bloque de lectura"
+    },
+	"definir": {
+        "prefix": "definir",
+        "body": [
+            "Definir ${1:variable} Como ${2:tipo}"
+        ],
+        "description": "Inserción de un bloque de definición de variables"
+    }
 }

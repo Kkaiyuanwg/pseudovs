@@ -1,5 +1,5 @@
 {
-	"name": "Pseudocodigo-ES",
+	"name": "pseudocodigo-es",
 	"author": {
 		"name": "Kkai"
 	},
@@ -7,7 +7,7 @@
 	"icon": "logo.png",
 	"displayName": "Pseudocódigo",
 	"description": "Formato para pseudocódgo en español",
-	"version": "0.0.1",
+	"version": "0.3.0",
 	"repository": {
 		"url": "https://github.com/kkaiyuanwg/pseudovs"
 	},
@@ -56,5 +56,9 @@
 		"isPreReleaseVersion": false,
 		"installedTimestamp": 1681918744102,
 		"preRelease": false
+	},
+	"dependencies": {
+		"g": "^2.0.1",
+		"vsce": "^2.15.0"
 	}
 }
