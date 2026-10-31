@@ -2,8 +2,8 @@
 	"algoritmo": {
 		"prefix": "algoritmo",
 		"body": [
-			"Algoritmo ${1:name}",
-			"\t",
+			"Algoritmo ${1:nombre}",
+			"\t$0",
 			"FinAlgoritmo"
 		],
 		"description": "Inserción de un bloque de algoritmo"
@@ -11,11 +11,11 @@
 	"para": {
 		"prefix": "para",
 		"body": [
-			"Para ${2:min} Hasta ${3:max} Con paso ${1:i} Hacer { ",
+			"Para ${1:contador} <- ${2:inicio} Hasta ${3:fin} Con Paso ${4:1} Hacer",
 			"\t$0",
 			"FinPara"
 		],
-		"description": "Inserción de un bloque de bucle tipo \"para\""
+		"description": "Inserción de un bucle Para"
 	},
 	"repetir": {
 		"prefix": "repetir",
@@ -24,7 +24,7 @@
 			"\t$0",
 			"Hasta Que ${1:condición}"
 		],
-		"description": "Inserción de un bloque de bucle tipo \"para\""
+		"description": "Inserción de un bucle Repetir-Hasta"
 	},
 	"mientras": {
 		"prefix": "mientras",
@@ -39,9 +39,9 @@
 		"prefix": "si",
 		"body": [
 			"Si ${1:condición} Entonces",
-			"\t$0",
+			"\t${2:instrucciones}",
 			"SiNo",
-			"\t$0",
+			"\t${3:instrucciones}",
 			"FinSi"
 		],
 		"description": "Inserción de un bloque \"si\""
@@ -56,7 +56,7 @@
 	"proceso": {
         "prefix": "proceso",
         "body": [
-            "Proceso ${1:nombre}(${2:parametros})",
+            "Proceso ${1:nombre}(${2:parámetros})",
             "\t$0",
             "FinProceso"
         ],
