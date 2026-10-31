@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "algo-Aix",
+	"name": "Pseudocódigo",
 	"patterns": [
 		{"include": "#keywords"},
 		{"include": "#expression"},
@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "comment.line",
+					"name": "comment.line.double-slash",
 					"match": "//.*$"
 				},
 				{
@@ -22,53 +22,41 @@
 					"end": "\\*\\/"
 				},
 				{
-					"name": "keyword.control.algo-aix",
-					"match": "\\b(?i:(definir|como|esperar|hasta que|repita|retorne|para|escribir|leer|borrar|esperar))\\b"
+					"name": "keyword.control.pseudocode",
+					"match": "\\b(?i:(algoritmo|finalgoritmo|proceso|finproceso|funcion|finfuncion|si|entonces|sino|finsi|segun|escoger|caso|de otro modo|finsegun|mientras|finmientras|hacer|para|finpara|repetir|hasta|que|con|paso|desde|esperar|retorne|definir|como|escribir|leer|borrar))\\b"
 				},
 				{
-					"name": "entity.name",
+					"name": "support.function.pseudocode",
 					"match": "\\b(?i:(raiz|rc|abs|ln|exp|sen|cos|tan|asen|acos|atan|trunc|redon|azar|aleatorio|longitud|mayusculas|minusculas|subcadenas|concatenar|convertiranumero|convertiratexto))\\b"
 				},
 				{
-					"name": "support.type",
-					"match": "\\b(?i:(proceso|finproceso|algoritmo|inicio|fin|finalgoritmo|<-|->|:=))\\b"
+					"name": "keyword.operator.assignment.pseudocode",
+					"match": "<-|->|:="
 				},
 				{
-					"name": "variable.language",
+					"name": "support.type.pseudocode",
 					"match": "\\b(?i:(void|real|entero|caracter|texto|numero|numerico|literal|lógico|logico))\\b"
 				},
 				{
-					"name": "constant.numeric",
+					"name": "constant.language.boolean.pseudocode",
 					"match": "\\b(?i:(verdadero|falso|true|false))\\b"
-				},
-				{
-					"name": "storage.type",
-					"match": "\\b(?i:(de otro modo|repetir|hasta que|para|finpara|hasta|con paso|funcion|finfuncion|si|entonces|sino|escoger|caso|mientras|finmientras|segun|finsegun|hacer|finsi))\\b"
-				},
-				{
-					"name": "keyword.operator",
-					"match": "\\b(?i:(es|no|distinto de|igual a|mayor que|menor que|mayor o igual a|menor o igual a|es cero|es positivo|es negativo|es par|es impar|es multiplo de|es divisible por|==|=|!=|<|>|<=|>=))\\b"
 				},
 				{
 					"name": "keyword.operator.logical.pseudocode",
 					"match": "\\b(?i:(y|o|no))\\b"
 				},
 				{
-					"name": "keyword.operator.comparison.pseudocode",
-					"match": "\\b(>|<|=|<=|>=|<>)\\b"
+					"name": "keyword.operator.word.pseudocode",
+					"match": "\\b(?i:(es|distinto de|igual a|mayor que|menor que|mayor o igual que|menor o igual que|es cero|es positivo|es negativo|es par|es impar|es múltiplo de|es multiplo de|es divisible por|mod))\\b"
 				},
 				{
-					"name": "keyword.operator.arithmetic.pseudocode",
-					"match": "(\\+|\\/|-|\\*|MOD)\\b"
-				},
-				{
-					"name": "keyword.operator.logical.and.pseudocode",
-					"match": "\\b&\\b"
+					"name": "keyword.operator.pseudocode",
+					"match": "==|!=|<>|<=|>=|[=<>+*/%&-]"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.quoted.double.algo-aix",
+			"name": "string.quoted.double.pseudocode",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
@@ -79,7 +67,7 @@
 			]
 		},
 		"string": {
-			"name": "string.quoted.single.algo-aix",
+			"name": "string.quoted.single.pseudocode",
 			"begin": "'",
 			"end": "'",
 			"patterns": [
@@ -90,24 +78,24 @@
 			]
 		},
 		"expression": {
-			"name": "support.function",
+			"name": "support.function.pseudocode",
 			"match": "fijar"
 		},
 		"numbers": {
 			"patterns": [
 				{
-					"name": "constant.numeric.integer.algo-aix",
-					"match": "\\b[0-9]+(?![0-9]*\\.)\\b"
+					"name": "constant.numeric.float.pseudocode",
+					"match": "\\b[0-9]+\\.[0-9]+\\b"
 				},
 				{
-					"name": "constant.numeric.float.algo-aix",
-					"match": "\\b[0-9]+\\.[0-9]+\\b"
+					"name": "constant.numeric.integer.pseudocode",
+					"match": "\\b[0-9]+\\b"
 				}
 			]
 		},
 		"params": {
-			"name": "variable.parameter",
-			"match": "\\b(in|in_out|out)\\b"
+			"name": "variable.parameter.pseudocode",
+			"match": "\\b(?i:(in|in_out|out))\\b"
 		}
 	},
 	"scopeName": "source.algo"

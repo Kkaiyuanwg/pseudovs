@@ -5,6 +5,5 @@ node_modules/**
 test/**
 *.vsix
 .vsixmanifest
-extension.js
 extension.png
 installer.png

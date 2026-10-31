@@ -1,3 +1,4 @@
 teste.alg
 node_modules/
+.vscode/**
 *.vsix
