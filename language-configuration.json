@@ -1,14 +1,11 @@
 {
     "comments": {
-        // symbol used for single line comment. Remove this entry if your language does not support line comments
         "lineComment": "//",
-        // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
         "blockComment": [
-            "[",
-            "]"
+            "/*",
+            "*/"
         ]
     },
-    // symbols used as brackets
     "brackets": [
         [
             "{",
@@ -23,24 +20,119 @@
             ")"
         ]
     ],
-    // symbols that are auto closed when typing
     "autoClosingPairs": [
-        [
-            "Algorito",
-            "FinAlgoritmo"
-        ],
-        [
-            "Si",
-            "FinSi"
-        ],
-        [
-            "Algo:",
-            "Variables locales:"
-        ],
-        [
-            "Hacer:",
-            "Hasta que"
-        ],
+        {
+            "open": "Algoritmo",
+            "close": "FinAlgoritmo",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "algoritmo",
+            "close": "FinAlgoritmo",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "Proceso",
+            "close": "FinProceso",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "proceso",
+            "close": "FinProceso",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "Funcion",
+            "close": "FinFuncion",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "funcion",
+            "close": "FinFuncion",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "Si",
+            "close": "FinSi",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "si",
+            "close": "FinSi",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "Mientras",
+            "close": "FinMientras",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "mientras",
+            "close": "FinMientras",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "Para",
+            "close": "FinPara",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "para",
+            "close": "FinPara",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "Repetir",
+            "close": "Hasta Que",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
+        {
+            "open": "repetir",
+            "close": "Hasta Que",
+            "notIn": [
+                "string",
+                "comment"
+            ]
+        },
         [
             "{",
             "}"
@@ -62,24 +154,20 @@
             "'"
         ]
     ],
-    // symbols that that can be used to surround a selection
+    "indentationRules": {
+        "increaseIndentPattern": "^\\s*(?:(?:[Aa]lgoritmo|[Pp]roceso|[Ff]uncion)\\b.*|[Ss]i\\b.*\\bEntonces\\s*|[Mm]ientras\\b.*\\bHacer\\s*|[Pp]ara\\b.*\\bHacer\\s*|[Rr]epetir\\s*|[Ss]i[Nn]o\\s*)$",
+        "decreaseIndentPattern": "^\\s*(?:[Ff]in(?:Algoritmo|Proceso|Funcion|Si|Mientras|Para)\\b|[Hh]asta\\s+[Qq]ue\\b|[Ss]i[Nn]o\\b)"
+    },
+    "onEnterRules": [
+        {
+            "beforeText": "^\\s*(?:[Aa]lgoritmo\\b.*|[Pp]roceso\\b.*|[Ff]uncion\\b.*|[Ss]i\\b.*\\bEntonces\\s*|[Mm]ientras\\b.*\\bHacer\\s*|[Pp]ara\\b.*\\bHacer\\s*|[Rr]epetir\\s*)$",
+            "afterText": "^\\s*(?:Fin(?:Algoritmo|Proceso|Funcion|Si|Mientras|Para)\\b|Hasta\\s+Que\\b).*$",
+            "action": {
+                "indent": "indentOutdent"
+            }
+        }
+    ],
     "surroundingPairs": [
-        [
-            "Algorito",
-            "FinAlgoritmo"
-        ],
-        [
-            "Si",
-            "FinSi"
-        ],
-        [
-            "Algo:",
-            "Variables locales:"
-        ],
-        [
-            "Hacer:",
-            "Hasta que"
-        ],
         [
             "{",
             "}"
