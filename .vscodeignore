@@ -1,1 +1,10 @@
-node_modules/
+node_modules/**
+.git/**
+.vscode/**
+.gitignore
+test/**
+*.vsix
+.vsixmanifest
+extension.js
+extension.png
+installer.png
