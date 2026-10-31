@@ -6,22 +6,56 @@
 	"publisher": "Kkai",
 	"icon": "logo.png",
 	"displayName": "Pseudocódigo",
-	"description": "Formato para pseudocódgo en español",
-	"version": "0.3.0",
+	"description": "Resaltado de sintaxis y snippets para pseudocódigo en español.",
+	"version": "1.0.0",
+	"main": "./extension.js",
 	"repository": {
 		"url": "https://github.com/kkaiyuanwg/pseudovs"
 	},
+	"activationEvents": [
+		"onLanguage:pseudo-es",
+		"onCommand:pseudocodigo.runFile"
+	],
+	"bugs": {
+		"url": "https://github.com/kkaiyuanwg/pseudovs/issues"
+	},
+	"homepage": "https://github.com/kkaiyuanwg/pseudovs#readme",
+	"keywords": [
+		"pseudocódigo",
+		"pseudocode",
+		"español",
+		"snippets"
+	],
 	"engines": {
 		"vscode": "^1.39.0"
+	},
+	"scripts": {
+		"start": "node src/cli.js",
+		"interpreter": "node src/cli.js"
+	},
+	"bin": {
+		"pseudocodigo": "./src/cli.js"
 	},
 	"categories": [
 		"Programming Languages"
 	],
 	"contributes": {
+		"commands": [
+			{
+				"command": "pseudocodigo.runFile",
+				"title": "Ejecutar pseudocódigo",
+				"category": "Pseudocódigo",
+				"icon": {
+					"light": "./run.svg",
+					"dark": "./run.svg"
+				}
+			}
+		],
 		"languages": [
 			{
 				"id": "pseudo-es",
 				"aliases": [
+					"Pseudocódigo",
 					"pseudo-ES",
 					"pseudo-ESP"
 				],
@@ -45,21 +79,18 @@
 				"language": "pseudo-es",
 				"path": "./snippets/snippets.json"
 			}
-		]
+		],
+		"menus": {
+			"editor/title": [
+				{
+					"command": "pseudocodigo.runFile",
+					"when": "editorLangId == pseudo-es && pseudocodigo.codeRunnerAvailable != true",
+					"group": "navigation"
+				}
+			]
+		}
 	},
-	"__metadata": {
-		"id": "930c7f5f-aeaf-4df7-a180-8347d489ff79",
-		"publisherId": "b9caca0a-7096-4429-834a-3422371bac12",
-		"publisherDisplayName": "Kkai",
-		"targetPlatform": "undefined",
-		"updated": false,
-		"isPreReleaseVersion": false,
-		"installedTimestamp": 1681918744102,
-		"preRelease": false
-	},
-	"dependencies": {
-		"g": "^2.0.1",
+	"devDependencies": {
 		"vsce": "^2.15.0"
 	}
 }
-
