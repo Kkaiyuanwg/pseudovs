@@ -6,7 +6,7 @@
 	"publisher": "Kkai",
 	"icon": "logo.png",
 	"displayName": "Pseudocódigo",
-	"description": "Resaltado de sintaxis y snippets para pseudocódigo en español.",
+	"description": "Resaltado de sintaxis e intérprete para pseudocódigo en español",
 	"version": "1.0.0",
 	"main": "./extension.js",
 	"repository": {
@@ -46,8 +46,8 @@
 				"title": "Ejecutar pseudocódigo",
 				"category": "Pseudocódigo",
 				"icon": {
-					"light": "./run.svg",
-					"dark": "./run.svg"
+					"light": "./run-light.svg",
+					"dark": "./run-dark.svg"
 				}
 			}
 		],
